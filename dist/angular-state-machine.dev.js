@@ -1,8 +1,8 @@
 /**
  * AngularJS service to implement a finite state machine.
- * @version v1.2.1 - 2020-07-28
- * @link https://github.com/tafax/angular-state-machine
- * @author Matteo Tafani Alunno <matteo.tafanialunno@gmail.com>
+ * @version v1.0.1 - 2020-07-28
+ * @link https://github.com/brramos/angular-state-machine
+ * @author Billy Ramos <billyrramos@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 
@@ -391,7 +391,6 @@ SyncStrategy.prototype.isAvailable = function(machineConfiguration, message) {
 	var transitions = machineConfiguration.getTransitions();
 	return this.$q.when(this.lastPromise)
 	  .then(function(){
-		  console.log('available');
 		  var edges = transitions[fsm.currentState.name];
 		  return edges.hasOwnProperty(message);
 	  })
@@ -472,7 +471,7 @@ SyncStrategy.prototype.send = function(machineConfiguration, message, parameters
 
 				var transition = edge[i];
 				// Checks predicate and if it passes add the final state to the passed ones.
-				if (fsm.$injector.invoke(transition.predicate, this, fsm.currentState)) {
+				if (fsm.$injector.invoke(transition.predicate, this, currentState)) {
 					passed.push(transition.to);
 				}
 			}

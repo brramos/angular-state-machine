@@ -98,7 +98,6 @@ SyncStrategy.prototype.isAvailable = function(machineConfiguration, message) {
 	var transitions = machineConfiguration.getTransitions();
 	return this.$q.when(this.lastPromise)
 	  .then(function(){
-		  console.log('available');
 		  var edges = transitions[fsm.currentState.name];
 		  return edges.hasOwnProperty(message);
 	  })
@@ -179,7 +178,7 @@ SyncStrategy.prototype.send = function(machineConfiguration, message, parameters
 
 				var transition = edge[i];
 				// Checks predicate and if it passes add the final state to the passed ones.
-				if (fsm.$injector.invoke(transition.predicate, this, fsm.currentState)) {
+				if (fsm.$injector.invoke(transition.predicate, this, currentState)) {
 					passed.push(transition.to);
 				}
 			}
