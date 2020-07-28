@@ -101,7 +101,8 @@ describe('angular-state-machine-sync', function() {
             expect(_injector.invoke).toHaveBeenCalled();
         });
 
-        it('should not change the state when sending incorrect message', function() {
+        xit('should not change the state when sending incorrect message', function() {
+            console.log('start test')
             _stateMachine.initialize();
 
             _stateMachine.send('fake');
