@@ -1,5 +1,5 @@
 # AngularJS State Machine
-[![Build Status](https://travis-ci.org/tafax/angular-state-machine.svg?branch=master)](https://travis-ci.org/tafax/angular-state-machine)
+Forked from https://github.com/tafax/angular-state-machine by Matteo Tafani Alunno
 
 It is an AngularJS module to implement a [Finite-State Machine](http://en.wikipedia.org/wiki/Finite-state_machine).
 It can be useful in many situations where the state of an app(or module) follows specific paths. For example, it is very useful to
@@ -17,9 +17,9 @@ way to work.
 
 ## Installation
 You can download this by:
-* Using bower and running `bower install angular-state-machine --save` (recommended)
-* Downloading manually the [unminified version](https://raw.github.com/tafax/angular-state-machine/master/dist/angular-state-machine.js) or
-the [minified production version](https://raw.github.com/tafax/angular-state-machine/master/dist/angular-state-machine.min.js)
+* Using npm and running `npm install angular-state-machine --save`
+* Downloading manually the [unminified version](https://raw.github.com/brramos/angular-state-machine/master/dist/angular-state-machine.js) or
+the [minified production version](https://raw.github.com/brramos/angular-state-machine/master/dist/angular-state-machine.min.js)
 
 After installation, import the module in your app.
 ````javascript

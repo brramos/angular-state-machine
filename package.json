@@ -1,13 +1,13 @@
 {
     "name": "angular-state-machine",
-    "version": "1.2.1",
+    "version": "1.0.0",
     "filename": "angular-state-machine.min.js",
     "main": "./dist/angular-state-machine.min.js",
-    "homepage": "https://github.com/tafax/angular-state-machine",
-    "author": "Matteo Tafani Alunno <matteo.tafanialunno@gmail.com>",
+    "homepage": "https://github.com/brramos/angular-state-machine",
+    "author": "Billy Ramos <billyrramos@gmail.com>",
     "repository": {
         "type": "git",
-        "url": "git://github.com/tafax/angular-state-machine.git"
+        "url": "git://github.com/brramos/angular-state-machine.git"
     },
     "devDependencies": {
         "grunt": "^1.2.1",
@@ -33,7 +33,7 @@
     },
     "description": "AngularJS service to implement a finite state machine.",
     "bugs": {
-        "url": "https://github.com/tafax/angular-state-machine/issues"
+        "url": "https://github.com/brramos/angular-state-machine/issues"
     },
     "scripts": {
         "grunt": "grunt",
